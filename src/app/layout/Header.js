@@ -13,6 +13,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import colors from './../styles/colors';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -95,7 +96,9 @@ export default function Header() {
           <Box display="flex" justifyContent="space-between" alignItems="center" sx={{ width: "100%" }}>
             <Box>
               <Typography variant="h6" noWrap component="div">
+                <Link to="/home">
                 Scriptio
+                </Link>
               </Typography>
             </Box>
             <Box display="flex">

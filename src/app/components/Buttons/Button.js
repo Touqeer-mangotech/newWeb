@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '@mui/material';
 import colors from './../../styles/colors';
 
-function AuthButton(props) {
+export default function AuthButton(props) {
   return (
     <Button
       variant='contained'
@@ -23,4 +23,3 @@ function AuthButton(props) {
   )
 }
 
-export default AuthButton
