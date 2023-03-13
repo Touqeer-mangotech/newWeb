@@ -1,33 +1,72 @@
-import { Box, Dialog, DialogContent, DialogTitle, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Dialog, DialogContent, DialogTitle, Radio, Typography } from '@mui/material'
+import React, { useState } from 'react'
+import { DeleteOutline, Edit } from '@mui/icons-material';
 import colors from '../../styles/colors'
-import InputField from '../InputField'
+import InputField from '../Fields/InputField'
 import SimpleButton from '../Buttons/SimpleButton'
-function AddressDialog({open, setOpen}) {
+import { useNavigate } from 'react-router-dom'
+
+function AddressDialog({ open, setOpen }) {
+  const navigate = useNavigate()
+  const [selectedValue, setSelectedValue] = useState('a');
+
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
   return (
     <Dialog open={open} onClose={setOpen}
-    PaperProps={{
+      PaperProps={{
         style: {
           borderRadius: "10px",
-          minWidth: "400px",
-          maxWidth: "400px"
+          minWidth: "500px",
+          maxWidth: "500px"
         },
       }}>
-        <Box sx={{display:"flex",  justifyContent:"center",
-                  color:colors.secondary}}>
+      <Box sx={{
+        display: "flex", justifyContent: "center",
+        color: colors.secondary
+      }}>
         <DialogTitle>Delivery Adresses</DialogTitle>
+      </Box>
+      <DialogContent>
+        <Box sx={{ py: 1, display: "flex" }} >
+          <Box sx={{ pr: 1 }}>
+            <Radio
+              checked={selectedValue === 'a'}
+              onChange={handleChange}
+              value="a"
+              name="radio-buttons"
+              inputProps={{ 'aria-label': 'A' }}
+            />
+          </Box>
+          <Box display="flex" justifyContent="space-between" width="100%" >
+            <Box sx={{ px: 1, maxWidth: "300px" }}>
+              <Typography sx={{
+                textOverflow: "ellipsis", overflow: "hidden",
+                whiteSpace: "nowrap", fontWeight: "bold"
+              }}>
+                Address Line 1asdsads adsad sadasd asdasda sda</Typography>
+              <Typography>U.A.E</Typography>
+            </Box>
+            <Box sx={{ pr: 0.5 }}>
+              <Edit sx={{
+                mx: 1, color: colors.primary, cursor: 'pointer',
+                '&:hover': { color: colors.secondary, transition: '0.3s ease-in-out', },
+              }} />
+              <DeleteOutline sx={{
+                color: colors.primary, cursor: 'pointer',
+                '&:hover': {
+                  color: colors.secondary, transition: '0.3s ease-in-out',
+                },
+              }} />
+            </Box>
+          </Box>
         </Box>
-        <DialogContent>
-            <Box sx={{py:1}}>
-            <InputField label="Address 1"/>
-            </Box>
-            <Box sx={{py:1}}>
-            <InputField label="Address 2"/>
-            </Box>
-            <Box sx={{py:1}}>
-            <SimpleButton title="Add Address"/>
-            </Box>
-        </DialogContent>
+        <Box sx={{ py: 1 }}>
+          <SimpleButton title="Add New Address"
+            onClick={() => navigate('/order-address')} />
+        </Box>
+      </DialogContent>
     </Dialog>
   )
 }

@@ -1,5 +1,6 @@
 import LandingPage from "../views/LandingPage/LandingPage";
 import Order from "../views/Order/Order";
+import OrderAddress from "../views/Order/OrderAddress";
 import Prescription from "../views/Prescription/Prescription";
 import RequestMedication from "../views/RequestMedication/RequestMedication";
 import Login from './../views/Auth/Login';
@@ -34,6 +35,10 @@ const WebRoutes = [
   {
     path: '/orders',
     component: <Order />
+  },
+  {
+    path: '/order-address',
+    component: <OrderAddress />
   },
 ]
 

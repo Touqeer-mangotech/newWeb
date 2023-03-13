@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
-import InputField from '../../components/InputField';
+import InputField from '../../components/Fields/InputField';
 import colors from './../../styles/colors';
 import AuthButton from './../../components/Buttons/Button';
 import Images from '../../assets/Images';

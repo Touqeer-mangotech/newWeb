@@ -15,6 +15,9 @@ const theme = createTheme({
       main: colors.secondary,
       contrastText: '#fff',
     },
+    background: {
+      default: colors.bgColor,
+    },
   },
   typography: {
     fontFamily: "Montserrat",
