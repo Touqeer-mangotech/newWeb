@@ -19,9 +19,7 @@ function ServicesBox({ content, images, title, url }) {
                     <Box>
                         <Typography variant='h6' sx={{ fontWeight: "bold", py: 1 }}>{content}</Typography>
                     </Box>
-                    <Box sx={{ p: 2, bgcolor: colors.skyBlue, borderRadius: "12px" }}>
-                        <img src={images} alt="icons" style={{ width: "70px", height: "60px", zIndex: 100 }} />
-                    </Box>
+                    <Box sx={{ p: 2 }}> {images} </Box>
                     <Box sx={{ py: 1 }}>
                         <Typography
                             variant='button'

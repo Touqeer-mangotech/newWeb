@@ -10,28 +10,41 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
-import { Badge, Tooltip, Menu, Avatar, Typography, Toolbar, ListItemText, ListItemButton, ListItem, List } from '@mui/material';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Badge, Tooltip, Menu, Avatar, Typography, Toolbar, ListItemText, ListItemButton, ListItem, List, Button, CardMedia } from '@mui/material';
+import { NotificationsActiveTwoTone } from '@mui/icons-material';
 import colors from './../styles/colors';
 import { styled } from '@mui/material/styles';
 import Images from './../assets/Images';
+import Navigation from './../Navigation';
 
 const drawerWidth = 240;
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: theme.spacing(0, 1),
+  padding: theme.spacing(3, 0, 1, 1),
   margin: '10px',
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
-
+const DrawerFooter = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: theme.spacing(4, 1, 3, 1),
+  borderRadius: "10px",
+  margin: '10px',
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+}));
 function SideNav(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const navigate = useNavigate()
+  const { pathname } = useLocation();
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [anchorElNotify, setAnchorElNotify] = useState(null);
 
@@ -43,14 +56,15 @@ function SideNav(props) {
     <div>
       <DrawerHeader>
         <Link to='/home'>
-          <img src={Images.logo} alt="Scriptio" style={{ width: "100px", marginRight: "10px" }} />
+          <img src={Images.logo} alt="Scriptio" style={{ width: "125px", marginRight: "10px" }} />
         </Link>
       </DrawerHeader>
-      <Divider />
       <List>
-        {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {Navigation.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton
+              selected={pathname === item.path ? true : false}
+              onClick={() => { navigate(item.path) }}
               sx={{
                 minHeight: 48,
                 // justifyContent: open ? 'initial' : 'center',
@@ -70,14 +84,32 @@ function SideNav(props) {
                 },
               }}
             >
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: 4,
+                  justifyContent: 'center',
+                  bgcolor: colors.white,
+                  borderRadius: '6px',
+                }}>
+                {item.icon}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={item.label} primaryTypographyProps={{ fontWeight: 'bold' }} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
+      <DrawerFooter sx={{ bgcolor: colors.bgColor }}>
+        <img src={Images.navImg} alt="Navbar" style={{ width: "125px" }} />
+        <Typography fontFamily="TiltNeon" sx={{ textAlign: "center", py: 2 }}>Download Scriptio on your smartphones for a convenient order.</Typography>
+        <img src={Images.iphone} alt="Nav" style={{ width: "125px" }} />
+        {/* <Button sx={{ mb: 4, fontSize: "12px", textTransform: 'none', color: colors.white, bgcolor: colors.quoted }}>
+          <Box>
+            <CardMedia component={'img'} image={Images.google} sx={{ height: "30px", width: "20px" }} />
+          </Box>
+          <Typography>GooglePlay</Typography>
+        </Button> */}
+      </DrawerFooter>
     </div>
   );
 
@@ -89,18 +121,23 @@ function SideNav(props) {
       <AppBar
         position="fixed"
         sx={{
-          "background-image": "linear-gradient(to left, #00cccf,#53B1BF, #00b6b8,#2c649d, #008ec3, )",
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
+          bgcolor: colors.white,
+          // width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: { sm: `calc(100% - 285px)` },
+          // ml: { sm: `${drawerWidth}px` },
+          borderRadius: "10px",
+          boxShadow: "none",
+          mt: 2,
+          mr: 4,
         }}
       >
         <Toolbar>
           <IconButton
-            color="inherit"
+            // color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ ml: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -115,7 +152,7 @@ function SideNav(props) {
                   // onClick={(e) => { setAnchorElNotify(e.currentTarget); }} 
                   sx={{ px: 2 }}>
                   <Badge color="error">
-                    <NotificationsNoneOutlinedIcon sx={{ color: colors.white }} />
+                    <NotificationsActiveTwoTone sx={{ color: colors.primary }} />
                   </Badge>
                 </IconButton>
               </Tooltip>
@@ -206,7 +243,7 @@ function SideNav(props) {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, borderRight: colors.white },
           }}
           open
         >

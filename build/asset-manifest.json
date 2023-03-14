@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1c06665c.css",
+    "main.js": "/static/js/main.899b0d35.js",
+    "static/js/787.97da0685.chunk.js": "/static/js/787.97da0685.chunk.js",
+    "static/media/cimage.jpg": "/static/media/cimage.e1e6fc9fe2fec8fdedf5.jpg",
+    "static/media/navImg.png": "/static/media/navImg.91e6d5463c50ff545d77.png",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
+    "static/media/HomeTitle.png": "/static/media/HomeTitle.18f9c56e3957bd1a462e.png",
+    "static/media/banner.png": "/static/media/banner.48956cade877b99bd8c8.png",
+    "static/media/iphone.png": "/static/media/iphone.a7c8ca28b4475c3b088b.png",
+    "static/media/TiltNeon-Regular.ttf": "/static/media/TiltNeon-Regular.f0cf4e9d55d75f58f0ca.ttf",
+    "static/media/prescript.png": "/static/media/prescript.649e63c55768479d519d.png",
+    "static/media/google.png": "/static/media/google.1f14921833077eb32a6a.png",
+    "static/media/map.png": "/static/media/map.65db9b5577eda85d3eb8.png",
+    "static/media/logo.png": "/static/media/logo.26c5dd20ec8b70ae2718.png",
+    "static/media/user_avatar.png": "/static/media/user_avatar.0e7881d20c32d49e5ad5.png",
+    "index.html": "/index.html",
+    "main.1c06665c.css.map": "/static/css/main.1c06665c.css.map",
+    "main.899b0d35.js.map": "/static/js/main.899b0d35.js.map",
+    "787.97da0685.chunk.js.map": "/static/js/787.97da0685.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c06665c.css",
+    "static/js/main.899b0d35.js"
+  ]
+}

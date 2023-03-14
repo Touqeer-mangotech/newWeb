@@ -26,7 +26,7 @@ function AddressDialog({ open, setOpen }) {
         display: "flex", justifyContent: "center",
         color: colors.secondary
       }}>
-        <DialogTitle>Delivery Adresses</DialogTitle>
+        <DialogTitle>Delivery Addresses</DialogTitle>
       </Box>
       <DialogContent>
         <Box sx={{ py: 1, display: "flex" }} >

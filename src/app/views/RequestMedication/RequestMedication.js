@@ -10,13 +10,13 @@ import colors from '../../styles/colors';
 function RequestMedication() {
     return (
         <Layout>
-            <Box sx={{ p: 1 }}>
+            <Box sx={{ px: 2, py: 6 }}>
                 <Grid container spacing={2} >
                     <Grid item xs={12} md={8} sx={{ px: 1 }}>
                         <Box sx={{
                             boxShadow: `rgba(0, 0, 0, 0.1) 0px 1px 2px 0px`,
                             borderRadius: "8px",
-                            bgcolor: colors.white, minHeight: "500px"
+                            bgcolor: colors.white, minHeight: "450px"
                         }}>
                             <Box sx={{ display: "flex", justifyContent: "center" }}>
                                 <Typography variant='h5' fontWeight="bold">Request a medication</Typography>
@@ -95,10 +95,10 @@ function RequestMedication() {
                         <Box sx={{
                             boxShadow: `rgba(0, 0, 0, 0.1) 0px 1px 2px 0px`,
                             borderRadius: "8px", px: 1,
-                            bgcolor: colors.white, minHeight: "500px"
+                            bgcolor: colors.white, minHeight: "450px"
                         }}>
                             <Box sx={{ display: "flex", justifyContent: "center", py: 2 }}>
-                                <Typography variant='h6'> Place Order </Typography>
+                                <Typography variant='h6' sx={{ color: colors.secondary }}> Place Order </Typography>
                             </Box>
                             <Box sx={{ py: 1 }}>
                                 <InputField label="Medicine Name" />

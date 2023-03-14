@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, Typography } from '@mui/material'
 import React from 'react'
 
-function PrescrptionCard({ content, icon, }) {
+function PrescrptionCard({ title, content, icon, }) {
   return (
     <Card sx={{
       maxWidth: "300px", minHeight: "170px",
@@ -10,13 +10,16 @@ function PrescrptionCard({ content, icon, }) {
      rgba(159, 162, 191, 0.32) 0px 2px 2px`,
     }}>
       <CardContent>
-        <Box sx={{ display: "flex", alignItems: "center", }}>
+        <Box sx={{ display: "flex", justifyContent: "center", }}>
+          <Typography sx={{ fontWeight: "bold", }}>{title}</Typography>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center", }}>
           <Box px={1}>
             {icon}
           </Box>
-          <Box >
-            <Typography variant='h6' sx={{ fontWeight: "bold", p: 2 }}>{content}</Typography>
-          </Box>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center", }}>
+          <Typography variant='body1' sx={{ fontWeight: "bold", p: 2 }}>{content}</Typography>
         </Box>
       </CardContent>
     </Card>

@@ -6,35 +6,58 @@ import Layout from '../../layout/Layout';
 import ServicesBox from '../../components/Box/ServicesBox';
 import Images from '../../assets/Images'
 import LastOrders from '../../components/Box/LastOrders';
+import SimpleCard from '../../components/Card/SimpleCard';
+import { DataSaverOff, Article, MonitorHeart, Interests, VolunteerActivism } from '@mui/icons-material';
+import colors from './../../styles/colors';
+import BannerCard from '../../components/Card/BannerCard';
 function Home() {
   return (
     <Layout>
 
       <Grid container >
-        <Grid item xs={12}>
+        <Grid item xs={12} pt={5} pl={2}>
           <TitleBox />
         </Grid>
       </Grid>
       <Box sx={{ p: 2 }}>
-        <Grid container spacing={1} pt={2}>
-          <Grid item xs={8}>
+        <Grid container spacing={3} pt={2}>
+          <Grid item xs={7}>
             <Grid container >
-              <Grid item xs={6} md={6} mb={2} >
-                <ServicesBox content={"Upload Prescription"} title={"Upload"} url={'/prescription'} images={Images.capsule} />
+              <Grid item xs={12} md={12} mb={2} >
+                <BannerCard title={"Order Status"}
+                  icon={<Article sx={{
+                    backgroundColor: colors.primary, color: colors.secondary, fontSize: '50px', borderRadius: "10px", padding: "10px"
+                  }} />} />
               </Grid>
-              <Grid item xs={6} md={6} mb={2}>
-                <ServicesBox content={"Request Medication"} title={"Request"} url={'/request-medication'} images={Images.heart} />
+              <Grid item xs={6} md={6} mb={2} pr={1} >
+                <ServicesBox content={"Upload Prescription"} title={"Upload"} url={'/prescription'}
+                  images={<MonitorHeart sx={{
+                    backgroundColor: colors.bg2, color: colors.front2, fontSize: '50px', borderRadius: "10px", padding: "10px"
+                  }} />} />
               </Grid>
-              <Grid item xs={6} md={6} mt={2}>
-                <ServicesBox content={"My Orders"} title={"Orders"} url={""} images={Images.capsule} />
-              </Grid>
-              <Grid item xs={6} md={6} mt={2}>
-                <ServicesBox content={"Status"} title={"Request"} url={'/request-medication'} images={Images.heart} />
+              <Grid item xs={6} md={6} mb={2} pl={1}>
+                <ServicesBox content={"Request Medication"} title={"Request"} url={'/request-medication'}
+                  images={<Interests sx={{
+                    backgroundColor: colors.bgHeart, color: colors.frontHeart, fontSize: '50px', borderRadius: "10px", padding: "10px"
+                  }}
+                  />} />
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={5}>
             <Grid Container>
+              <Grid item xs={12} mb={2} >
+                <SimpleCard title={"My Orders"}
+                  icon={<Article sx={{
+                    backgroundColor: colors.bg1, color: colors.front1, fontSize: '60px', borderRadius: "30px", padding: "10px"
+                  }} />} />
+              </Grid>
+              {/* <Grid item xs={12} mb={2}>
+                <SimpleCard title={"Order Status"}
+                  icon={<VolunteerActivism sx={{
+                    backgroundColor: colors.primary, color: colors.subFont, fontSize: '60px', borderRadius: "30px", padding: "10px"
+                  }} />} />
+              </Grid> */}
               <Grid item xs={12}>
                 <LastOrders />
               </Grid>
