@@ -18,8 +18,8 @@ function OrderStatusDialog({ open, setOpen, status }) {
       }}
     >
       <Box sx={{
-        display: "flex", justifyContent: "center",
-        color: colors.secondary
+        display: "flex", justifyContent: "center", fontWeight: "bold"
+        // color: colors.secondary
       }}>
         <DialogTitle>Order Status</DialogTitle>
       </Box>

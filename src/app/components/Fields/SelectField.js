@@ -6,10 +6,10 @@ function SelectField(props) {
   return (
     <FormControl fullWidth sx={{
       backgroundColor: colors.white,
-      borderRadius: "8px",
+      borderRadius: "12px",
       "& .MuiFormControl-root": {},
       "& .MuiInputLabel-root": { fontSize: "12px" },
-      // "& .MuiOutlinedInput-notchedOutline": { border: 0 }
+      "& .MuiOutlinedInput-notchedOutline": { borderRadius: 1.8 }
     }} size="small" >
       <InputLabel id="demo-simple-select-label">{props.title}</InputLabel>
       <Select

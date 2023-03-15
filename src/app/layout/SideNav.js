@@ -41,6 +41,8 @@ const DrawerFooter = styled('div')(({ theme }) => ({
 }));
 function SideNav(props) {
   const { window } = props;
+  //* For List Open and Expand
+  const [open, setOpen] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navigate = useNavigate()
@@ -67,19 +69,20 @@ function SideNav(props) {
               onClick={() => { navigate(item.path) }}
               sx={{
                 minHeight: 48,
-                // justifyContent: open ? 'initial' : 'center',
+                justifyContent: open ? 'initial' : 'center',
                 m: 1,
                 borderRadius: "8px",
                 "&.Mui-selected": {
-                  bgcolor: colors.secondary,
+                  backgroundImage: colors.primaryGradient,
+                  bgcolor: colors.primary,
                   color: colors.white,
                   ":hover": {
-                    backgroundColor: colors.secondary,
+                    backgroundColor: colors.primary,
                     color: colors.white,
                   }
                 },
                 ":hover": {
-                  backgroundColor: colors.secondary,
+                  backgroundColor: colors.primary,
                   color: colors.white,
                 },
               }}
@@ -125,7 +128,7 @@ function SideNav(props) {
           // width: { sm: `calc(100% - ${drawerWidth}px)` },
           width: { sm: `calc(100% - 285px)` },
           // ml: { sm: `${drawerWidth}px` },
-          borderRadius: "10px",
+          borderRadius: "12px",
           boxShadow: "none",
           mt: 2,
           mr: 4,

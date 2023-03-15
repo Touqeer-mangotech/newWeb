@@ -17,7 +17,7 @@ function Order() {
                     <Grid item xs={8}>
                         <Box sx={{ borderRadius: "8px", bgcolor: colors.white, }}>
                             <Box display="flex" justifyContent="center">
-                                <Typography variant='h6' sx={{ color: colors.secondary }}>My Orders</Typography>
+                                <Typography variant='h6' sx={{ fontWeight: 'bold', p: 1 }}>My Orders</Typography>
                             </Box>
                             <Box width="100%" display="flex" justifyContent="center">
                                 <MyOrdersCard orderId="3214" amount="AED 100" status="Completed" />
@@ -27,6 +27,9 @@ function Order() {
                             </Box>
                             <Box width="100%" display="flex" justifyContent="center">
                                 <MyOrdersCard orderId="3214" amount="AED 100" status="Accepted" />
+                            </Box>
+                            <Box width="100%" display="flex" justifyContent="center">
+                                <MyOrdersCard orderId="3214" amount="AED 100" status="Completed" />
                             </Box>
                             <Box width="100%" display="flex" justifyContent="center">
                                 <MyOrdersCard orderId="3214" amount="AED 100" status="Confirmed" />

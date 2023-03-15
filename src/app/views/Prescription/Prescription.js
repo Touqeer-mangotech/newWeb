@@ -3,11 +3,12 @@ import React, { useState } from 'react'
 import Layout from '../../layout/Layout'
 import colors from '../../styles/colors'
 import InputField from '../../components/Fields/InputField'
-import { CameraEnhanceTwoTone, EditLocationAlt, CloudUpload } from '@mui/icons-material';
+import { CameraEnhanceTwoTone, EditLocationAlt, CloudUpload, GiteRounded } from '@mui/icons-material';
 import AddressDialog from '../../components/Dialog/AddressDialog'
-import PrescrptionCard from '../../components/Card/PrescrptionCard'
 import { Description, DriveFolderUpload, BorderColor } from '@mui/icons-material';
 import SimpleButton from '../../components/Buttons/SimpleButton'
+import PrescriptionCard from '../../components/Card/PrescriptionCard'
+import DataField from '../../components/Fields/DataField'
 
 function Prescription() {
   const [prescription, setPrescription] = useState("")
@@ -28,13 +29,13 @@ function Prescription() {
         <Grid item xs={4}>
           <Grid container>
             <Grid item xs={12} py={3}>
-              <PrescrptionCard title="First" content="Upload Image of Prescription" icon={<DriveFolderUpload sx={{ color: colors.complete, fontSize: "60px" }} />} />
+              <PrescriptionCard title="First" content="Upload Image of Prescription" icon={<DriveFolderUpload sx={{ color: colors.ufoGreen, fontSize: "60px" }} />} />
             </Grid>
             <Grid item xs={12} pb={3} pt={1}>
-              <PrescrptionCard title="Second" content="Fill Prescription Detail" icon={<Description sx={{ color: colors.frontHeart, fontSize: "60px" }} />} />
+              <PrescriptionCard title="Second" content="Fill Prescription Detail" icon={<Description sx={{ color: colors.frontHeart, fontSize: "60px" }} />} />
             </Grid>
             <Grid item xs={12} py={1}>
-              <PrescrptionCard title="Third" content="Give Your Delivery Address" icon={<BorderColor sx={{ color: colors.front2, fontSize: "60px" }} />} />
+              <PrescriptionCard title="Third" content="Give Your Delivery Address" icon={<GiteRounded sx={{ color: colors.front2, fontSize: "62px" }} />} />
             </Grid>
           </Grid>
         </Grid>
@@ -42,11 +43,10 @@ function Prescription() {
         <Grid item xs={8} py={4}>
           <Grid container sx={{ mt: 3, justifyContent: "center", }}>
             <Grid item xs={12} >
-              <Box sx={{ px: 2, borderRadius: "8px", bgcolor: colors.white, boxShadow: `rgba(0, 0, 0, 0.1) 0px 1px 2px 0px` }}>
+              <Box sx={{ px: 2, borderRadius: "12px", bgcolor: colors.white, boxShadow: `rgba(0, 0, 0, 0.1) 0px 1px 2px 0px` }}>
                 <Box sx={{ display: 'flex', justifyContent: 'center', pt: 2 }}>
                   <Typography variant='h6' sx={{
-                    color: colors.secondary, py: 1,
-                    fontWeight: "bold",
+                    py: 1, fontWeight: "bold",
                   }}>Upload Prescription</Typography>
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center", pt: 1, flexDirection: "column", alignItems: "center" }}>
@@ -57,8 +57,7 @@ function Prescription() {
 
                   <Box sx={{ display: "flex", gap: "10px", justifyContent: "center" }}>
                     <span
-                      class="btn btn-primary btn-file"
-
+                      className="btn btn-primary btn-file"
                       style={{
                         position: "relative", overflow: "hidden",
                         color: "white", height: "50px", width: "fit-content",
@@ -79,7 +78,7 @@ function Prescription() {
                         style={{
                           position: " absolute", filter: "alpha(opacity=0)",
                           top: "0", right: "0", align: "right",
-                          minWidth: "100%", mineight: "100%", fontSize: " 100px",
+                          minWidth: "100%", minHeight: "100%", fontSize: " 100px",
                           opacity: "0", outline: "none", background: "white",
                           cursor: "inherit", display: "block",
                         }}
@@ -100,12 +99,12 @@ function Prescription() {
                   <Typography variant='body1' > Upload Prescription Image </Typography>
                 </Box>
                 <Box sx={{ p: 1 }}>
-                  <InputField label="Description"
+                  <DataField label="Description"
                     multiline
                     rows={3} />
                 </Box>
                 <Box sx={{ p: 1 }}>
-                  <InputField label="Select Address"
+                  <DataField label="Select Address"
                     disabled
                     InputProps={{
                       endAdornment: (

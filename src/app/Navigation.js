@@ -4,7 +4,7 @@ const styles = {
   iconSize: {
     p: 0.2,
     fontSize: "22px",
-    color: colors.primary,
+    color: colors.secondary,
   }
 }
 
@@ -22,7 +22,7 @@ const Navigation = [
   {
     label: 'MyProfile',
     icon: <Person sx={styles.iconSize} />,
-    path: '#',
+    path: '/profile',
   },
   {
     label: 'Settings',

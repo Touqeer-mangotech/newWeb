@@ -25,6 +25,7 @@ function ServicesBox({ content, images, title, url }) {
                             variant='button'
                             onClick={() => navigate(url)}
                             sx={{
+                                backgroundImage: colors.primaryGradient,
                                 bgcolor: colors.secondary, color: colors.white,
                                 py: 1, px: 6, cursor: "pointer", borderRadius: "8px",
                             }}>{title}</Typography>

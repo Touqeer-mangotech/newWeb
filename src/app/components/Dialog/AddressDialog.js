@@ -7,6 +7,8 @@ import SimpleButton from '../Buttons/SimpleButton'
 import { useNavigate } from 'react-router-dom'
 
 function AddressDialog({ open, setOpen }) {
+  console.log("🚀 ~ file: AddressDialog.js:10 ~ AddressDialog ~ setOpen:", setOpen)
+  console.log("🚀 ~ file: AddressDialog.js:10 ~ AddressDialog ~ open:", open)
   const navigate = useNavigate()
   const [selectedValue, setSelectedValue] = useState('a');
 
@@ -23,8 +25,8 @@ function AddressDialog({ open, setOpen }) {
         },
       }}>
       <Box sx={{
-        display: "flex", justifyContent: "center",
-        color: colors.secondary
+        display: "flex", justifyContent: "center", fontWeight: "bold"
+        // color: colors.secondary
       }}>
         <DialogTitle>Delivery Addresses</DialogTitle>
       </Box>

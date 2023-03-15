@@ -14,7 +14,7 @@ function LastOrders() {
         </Box>
         <Box display="flex" sx={{
           width: "100%",
-          borderRadius: "10px",
+          borderRadius: "12px",
           bgcolor: colors.hexGray,
           my: 1,
           p: 2
@@ -36,7 +36,8 @@ function LastOrders() {
                   textAlign: "center",
                   minWidth: "80px",
                   fontSize: "11px",
-                  bgcolor: colors.primary,
+                  backgroundImage: colors.accepted,
+                  bgcolor: colors.accepted,
                   color: colors.white,
                   py: 0.7, px: 1, borderRadius: "14px",
                 }}>Accepted</Typography>
@@ -67,6 +68,7 @@ function LastOrders() {
                   textAlign: "center",
                   minWidth: "80px",
                   fontSize: "11px",
+                  backgroundImage: colors.quoted,
                   bgcolor: colors.quoted,
                   color: colors.white,
                   py: 0.7, px: 1, borderRadius: "14px",

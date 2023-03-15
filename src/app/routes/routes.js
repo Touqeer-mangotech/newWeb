@@ -3,6 +3,7 @@ import Order from "../views/Order/Order";
 import OrderAddress from "../views/Order/OrderAddress";
 import Prescription from "../views/Prescription/Prescription";
 import RequestMedication from "../views/RequestMedication/RequestMedication";
+import UserProfile from "../views/UserProfile/UserProfile";
 import Login from './../views/Auth/Login';
 import SignUp from './../views/Auth/SignUp';
 import Home from './../views/Home/Home';
@@ -39,6 +40,10 @@ const WebRoutes = [
   {
     path: '/order-address',
     component: <OrderAddress />
+  },
+  {
+    path: '/profile',
+    component: <UserProfile />
   },
 ]
 

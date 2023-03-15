@@ -8,7 +8,7 @@ function SimpleCard(props) {
   return (
     <Card display="flex" sx={{
       maxWidth: "380px",
-      borderRadius: "10px", boxShadow: `rgba(159, 162, 191, 0.18) 0px 9px 16px,
+      borderRadius: "12px", boxShadow: `rgba(159, 162, 191, 0.18) 0px 9px 16px,
     rgba(159, 162, 191, 0.32) 0px 2px 2px`, py: 1.5
     }} >
       <CardContent sx={{ p: 2, '&:last-child': { pb: 2 } }}>

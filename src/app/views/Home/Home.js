@@ -45,7 +45,7 @@ function Home() {
             </Grid>
           </Grid>
           <Grid item xs={5}>
-            <Grid Container>
+            <Grid container>
               <Grid item xs={12} mb={2} >
                 <SimpleCard title={"My Orders"}
                   icon={<Article sx={{

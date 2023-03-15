@@ -1,8 +1,6 @@
 const colors = {
   primary: "#53B1BF",
   secondary: "#285D9A",
-  quoted: "#293447",
-  complete: "#44b700",
   white: "#ffff",
   hexGray: "#FAFAFA",
   bgColor: '#f2f5f9',
@@ -15,7 +13,20 @@ const colors = {
   bg2: "#c8eefa",
   frontHeart: "#db4064",
   bgHeart: "#f2c7d1",
-
+  silver: "#C5C5C5",
+  ufoGreen: "#28C66F",
+  primaryGradient: `linear-gradient(to right, #53b1bf, #349db9, #1a88b2, #1773a8, #285d9a)`,
+  TopDownGradient: `linear-gradient(to bottom, #53b1bf, #349db9, #1a88b2, #1773a8, #285d9a)`,
+  quoted: `linear-gradient(to right, #212835, #2c333f, #373d49, #424953, #4e545e)`,
+  quotedTopDown: "linear-gradient(to bottom, #212835, #2c333f, #373d49, #424953, #4e545e)",
+  complete: "linear-gradient(to right, #53b1bf, #489aa6, #3e848e, #346e77, #2a5960)",
+  completeTopDown: "linear-gradient(to bottom, #53b1bf, #489aa6, #3e848e, #346e77, #2a5960)",
+  accepted: "linear-gradient(to right, #4aa3b7, #319ca8, #189596, #058d82, #0a856d)",
+  acceptedTopDown: "linear-gradient(to bottom, #4aa3b7, #319ca8, #189596, #058d82, #0a856d)",
+  confirmed: "linear-gradient(to right, #275c98, #225186, #1d4674, #193b62, #153151)",
+  confirmTopDown: "linear-gradient(to bottom, #275c98, #225186, #1d4674, #193b62, #153151)",
+  requested: "linear-gradient(to right, #7a7a7a, #5f5e5f, #454345, #2e2a2b, #181313)",
+  requestedTopDown: "linear-gradient(to bottom, #7a7a7a, #5f5e5f, #454345, #2e2a2b, #181313)",
 }
 
 export default colors
