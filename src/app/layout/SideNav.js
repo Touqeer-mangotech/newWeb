@@ -159,40 +159,7 @@ function SideNav(props) {
                   </Badge>
                 </IconButton>
               </Tooltip>
-              <Menu
-                sx={{ mt: 5.5, }}
-                id="notify-appBar"
-                anchorEl={anchorElNotify}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                // open={Boolean(anchorElNotify)}
-                // onClose={() => setAnchorElNotify(null)}
-                PaperProps={{
-                  style: {
-                    width: '350px',
-                    maxHeight: '280px',
-                    borderRadius: '10px',
-                  },
-                }}
-              >
 
-              </Menu>
-
-              {/* User AVATAR */}
-              {/* <Box sx={{ m: 1 }}>
-                <Typography color={colors.secondary} fontWeight="bold" >{"userName"}</Typography>
-                {role === "manager" ?
-                  <Typography color={colors.secondary} fontSize="10px" textAlign="right">Manager</Typography> :
-                  <Typography color={colors.secondary} fontSize="10px" textAlign="right">Admin</Typography>
-                }
-              </Box> */}
               <Tooltip title="User" >
                 <IconButton onClick={(e) => setAnchorElUser(e.currentTarget)} sx={{ p: 0, m: 0.5 }}>
                   <Badge badgeContent={""}>
@@ -200,23 +167,6 @@ function SideNav(props) {
                   </Badge>
                 </IconButton>
               </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
-                id="menu-appBar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={() => setAnchorElUser(null)}
-              >
-              </Menu>
             </Box>
           </Box>
         </Toolbar>

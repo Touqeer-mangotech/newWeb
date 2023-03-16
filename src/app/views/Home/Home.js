@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Grid } from '@mui/material';
-import Header from '../../layout/Header';
 import TitleBox from '../../components/Box/TitleBox';
 import Layout from '../../layout/Layout';
 import ServicesBox from '../../components/Box/ServicesBox';
@@ -52,12 +51,6 @@ function Home() {
                     backgroundColor: colors.bg1, color: colors.front1, fontSize: '60px', borderRadius: "30px", padding: "10px"
                   }} />} />
               </Grid>
-              {/* <Grid item xs={12} mb={2}>
-                <SimpleCard title={"Order Status"}
-                  icon={<VolunteerActivism sx={{
-                    backgroundColor: colors.primary, color: colors.subFont, fontSize: '60px', borderRadius: "30px", padding: "10px"
-                  }} />} />
-              </Grid> */}
               <Grid item xs={12}>
                 <LastOrders />
               </Grid>

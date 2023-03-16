@@ -1,7 +1,6 @@
 import { Box } from '@mui/material'
 import React, { Fragment } from 'react'
 import colors from '../styles/colors'
-import Header from './Header'
 import SideNav from './SideNav';
 import { Typography, Toolbar } from '@mui/material';
 

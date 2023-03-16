@@ -141,7 +141,7 @@ function SignUp() {
                 </Typography>
               </Box>
               <Box sx={{ p: 2 }}>
-                <AuthButton title="Sign Up" />
+                <AuthButton title="Sign Up" type="submit" />
               </Box>
             </Typography>
           </Grid>

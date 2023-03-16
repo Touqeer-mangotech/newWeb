@@ -100,7 +100,7 @@ function Login() {
                 />
               </Box>
               <Box sx={{ px: 2 }}>
-                <AuthButton title="Login" onClick={() => navigate('/home')} />
+                <AuthButton title="Login" type="submit" onClick={() => navigate('/home')} />
               </Box>
             </Typography>
             <Box sx={{ my: 4 }}>
